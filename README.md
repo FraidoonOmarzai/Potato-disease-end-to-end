@@ -16,3 +16,10 @@ pip install -r requirements.txt
 ```
 * Define logger
 * Define utils/common.py
+
+* Get the dataset from kaggle and store it in the google drive
+```
+https://drive.google.com/file/d/1XboDAEEC_QsRP5HVVGPEuL27XCmPCiIH/view?usp=sharing
+```
+
+* **Data Ingestion**
