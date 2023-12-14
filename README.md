@@ -22,4 +22,16 @@ pip install -r requirements.txt
 https://drive.google.com/file/d/1XboDAEEC_QsRP5HVVGPEuL27XCmPCiIH/view?usp=sharing
 ```
 
+
+```bash
+### Workflow
+1. Update config.yaml
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline
+9. Update the dvc.yaml
+```
+
 * **Data Ingestion**
