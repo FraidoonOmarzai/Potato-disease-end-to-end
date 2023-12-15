@@ -12,10 +12,10 @@ class DataIngestionTrainingPipeline:
 
     def main(self):
         config = ConfigurationManager()
-        data_ingestion_config = config.dataIngestionConfig()
-        data_ingestinion = DataIngestion(confg=data_ingestion_config)
-        data_ingestinion.download_dataset()
-        data_ingestinion.extract_zip()
+        data_ingestion_config = config.get_data_ingestion()
+        data_ingestinion = DataIngestion(config=data_ingestion_config)
+        data_ingestinion.download_file()
+        data_ingestinion.extract_zip_file()
 
 
 if __name__ == '__main__':
