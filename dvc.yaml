@@ -7,3 +7,13 @@ stages:
     outs:
       - artifacts/data_ingestion/data.zip
       - artifacts/data_ingestion/PlantVillage
+
+  data_validation:
+    cmd: python3 src/PotatoDisease/pipeline/stage_02_data_validation.py
+    deps:
+      - src/PotatoDisease/pipeline/stage_02_data_validation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/PlantVillage
+    outs:
+      - artifacts/data_validation/status.txt
+    
