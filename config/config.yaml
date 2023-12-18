@@ -12,3 +12,9 @@ data_validation:
   root_dir: artifacts/data_validation
   unzip_dir: artifacts/data_ingestion/PlantVillage
   status: artifacts/data_validation/status.txt
+
+
+model_training:
+  root_dir: artifacts/model_training
+  dataset_path: artifacts/data_ingestion/PlantVillage
+  model_save: artifacts/model_training/model.h5

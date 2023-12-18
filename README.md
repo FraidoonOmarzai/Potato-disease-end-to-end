@@ -36,3 +36,4 @@ https://drive.google.com/file/d/1XboDAEEC_QsRP5HVVGPEuL27XCmPCiIH/view?usp=shari
 
 * **Data Ingestion**
 * **Data Validation**
+* **Model Training**
