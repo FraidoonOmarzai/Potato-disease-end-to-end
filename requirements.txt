@@ -15,6 +15,7 @@ joblib
 types-PyYAML
 scipy
 gdown
+mlflow
 
 # local package
 -e .
