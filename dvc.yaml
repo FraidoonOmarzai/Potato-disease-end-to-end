@@ -17,3 +17,11 @@ stages:
     outs:
       - artifacts/data_validation/status.txt
     
+  model_training:
+    cmd: python3 src/PotatoDisease/pipeline/stage_03_model_training.py 
+    deps:
+      - src/PotatoDisease/pipeline/stage_03_model_training.py
+      - config/config.yaml
+      - artifacts/data_ingestion/PlantVillage
+    outs:
+      - artifacts/model_training/model.h5

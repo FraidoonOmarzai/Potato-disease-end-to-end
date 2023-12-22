@@ -1,12 +1,14 @@
 from PotatoDisease.constants import *
 from PotatoDisease.utils.common import read_yaml, create_directories
 from PotatoDisease.entity.config_entity import (DataIngestionConfig,
-                                                DataValidationConfig)
+                                                DataValidationConfig,
+                                                ModelTrainingConfig)
 
 
 class ConfigurationManager:
-    def __init__(self, config=CONFIG_PATH):
+    def __init__(self, config=CONFIG_PATH, params=PARAMS_PATH):
         self.config = read_yaml(config)
+        self.params = read_yaml(params)
 
         create_directories([self.config.artifacts_root])
 
@@ -33,3 +35,18 @@ class ConfigurationManager:
             status=config.status
         )
         return data_validation_config
+
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        create_directories([config.root_dir])
+
+        model_training_config = ModelTrainingConfig(
+            root_dir=config.root_dir,
+            dataset_path=config.dataset_path,
+            model_save=config.model_save,
+            BATCH_SIZE=self.params.BATCH_SIZE,
+            IMAGE_SIZE=self.params.IMAGE_SIZE,
+            CHANNELS=self.params.CHANNELS,
+            EPOCHS=self.params.EPOCHS,
+        )
+        return model_training_config

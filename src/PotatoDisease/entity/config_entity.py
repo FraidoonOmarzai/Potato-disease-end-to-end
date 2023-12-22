@@ -15,3 +15,14 @@ class DataValidationConfig:
     root_dir: Path
     unzip_dir: Path
     status: str
+
+
+@dataclass
+class ModelTrainingConfig:
+    root_dir: Path
+    dataset_path: Path
+    model_save: Path
+    BATCH_SIZE: int
+    IMAGE_SIZE: int
+    CHANNELS: int
+    EPOCHS: int

@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 9df02a6ef67642913914953d3b9c72ca
-      size: 421
+      md5: 4ebbab541296e9fa1c95b5bd77dbac98
+      size: 579
     - path: src/PotatoDisease/pipeline/stage_01_data_ingestion.py
       hash: md5
       md5: 9449d07662aa9404b07bbb1b42a99717
@@ -31,8 +31,8 @@ stages:
       nfiles: 2152
     - path: config/config.yaml
       hash: md5
-      md5: 9df02a6ef67642913914953d3b9c72ca
-      size: 421
+      md5: 4ebbab541296e9fa1c95b5bd77dbac98
+      size: 579
     - path: src/PotatoDisease/pipeline/stage_02_data_validation.py
       hash: md5
       md5: 87eb8ccc0fd02344e7289afac71f5013
