@@ -12,6 +12,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     description="implementing complete ml project life-cycle",
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    # package_dir={"": "src"},
+    # packages=setuptools.find_packages(where="src"),
+    packages=setuptools.find_packages()
 )
