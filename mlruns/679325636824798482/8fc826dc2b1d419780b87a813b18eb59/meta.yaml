@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/44787/Desktop/projects/Potato-disease-end-to-end/mlruns/679325636824798482/8fc826dc2b1d419780b87a813b18eb59/artifacts
+end_time: 1703458376960
+entry_point_name: ''
+experiment_id: '679325636824798482'
+lifecycle_stage: active
+run_id: 8fc826dc2b1d419780b87a813b18eb59
+run_name: Tf
+run_uuid: 8fc826dc2b1d419780b87a813b18eb59
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703458150175
+status: 3
+tags: []
+user_id: '44787'

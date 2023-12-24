@@ -41,8 +41,8 @@ https://drive.google.com/file/d/1XboDAEEC_QsRP5HVVGPEuL27XCmPCiIH/view?usp=shari
     * add mlflow to the project
     * use dagshub
 ```bash
-MLFLOW_TRACKING_URI=https://dagshub.com/fraidoon_omarzai/Potato-disease-end-to-end.mlflow \
-MLFLOW_TRACKING_USERNAME=fraidoon_omarzai \
-MLFLOW_TRACKING_PASSWORD=bc25b16bd5206328d8899cf34377f26ad71d1420 \
+$env:MLFLOW_TRACKING_URI=https://dagshub.com/fraidoon_omarzai/Potato-disease-end-to-end.mlflow \
+$env:MLFLOW_TRACKING_USERNAME="fraidoon_omarzai" \
+$env:MLFLOW_TRACKING_PASSWORD="bc25b16bd5206328d8899cf34377f26ad71d1420" \
 python script.py
 ```

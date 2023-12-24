@@ -1,16 +1,16 @@
 schema: '2.0'
 stages:
   data_ingestion:
-    cmd: python src/pipeline/stage_01_data_ingestion.py
+    cmd: python src/PotatoDisease/pipeline/stage_01_data_ingestion.py
     deps:
     - path: config/config.yaml
       hash: md5
       md5: 46d7e965ab0fe12e516468ca490bfd7c
       size: 599
-    - path: src/pipeline/stage_01_data_ingestion.py
+    - path: src/PotatoDisease/pipeline/stage_01_data_ingestion.py
       hash: md5
-      md5: be695c3e2219ff4a2c2dc00c553c26b0
-      size: 895
+      md5: 35ea1fba163821b1e5c7aa25a37ada87
+      size: 945
     outs:
     - path: artifacts/data_ingestion/PlantVillage
       hash: md5
@@ -22,7 +22,7 @@ stages:
       md5: 41ae3a42f185d7412bc74424ad081295
       size: 39595884
   data_validation:
-    cmd: python src/pipeline/stage_02_data_validation.py
+    cmd: python src/PotatoDisease/pipeline/stage_02_data_validation.py
     deps:
     - path: artifacts/data_ingestion/PlantVillage
       hash: md5
@@ -33,12 +33,28 @@ stages:
       hash: md5
       md5: 46d7e965ab0fe12e516468ca490bfd7c
       size: 599
-    - path: src/pipeline/stage_02_data_validation.py
+    - path: src/PotatoDisease/pipeline/stage_02_data_validation.py
       hash: md5
-      md5: 8734c1f74d1b2e24cbbfaebdaa0eed30
-      size: 859
+      md5: a3ba76d9d481679026ac6edbbce76351
+      size: 909
     outs:
     - path: artifacts/data_validation/status.txt
       hash: md5
       md5: 86e6a2f694c57a675b3e2da6b95ff9ba
       size: 23
+  model_training:
+    cmd: python src/PotatoDisease/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/data_ingestion/PlantVillage
+      hash: md5
+      md5: 7c0baebd1a4c4d66cad44c65a629dd1d.dir
+      size: 39441201
+      nfiles: 2152
+    - path: config/config.yaml
+      hash: md5
+      md5: 46d7e965ab0fe12e516468ca490bfd7c
+      size: 599
+    - path: src/PotatoDisease/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: e48f34a0f3b8567a5843e6d4aa184acc
+      size: 875

@@ -1,26 +1,26 @@
 stages:
   data_ingestion:
-    cmd: python src/pipeline/stage_01_data_ingestion.py
+    cmd: python src/PotatoDisease/pipeline/stage_01_data_ingestion.py
     deps:
-      - src/pipeline/stage_01_data_ingestion.py
+      - src/PotatoDisease/pipeline/stage_01_data_ingestion.py
       - config/config.yaml
     outs:
       - artifacts/data_ingestion/data.zip
       - artifacts/data_ingestion/PlantVillage
 
   data_validation:
-    cmd: python src/pipeline/stage_02_data_validation.py
+    cmd: python src/PotatoDisease/pipeline/stage_02_data_validation.py
     deps:
-      - src/pipeline/stage_02_data_validation.py
+      - src/PotatoDisease/pipeline/stage_02_data_validation.py
       - config/config.yaml
       - artifacts/data_ingestion/PlantVillage
     outs:
       - artifacts/data_validation/status.txt
     
   model_training:
-    cmd: python src/pipeline/stage_03_model_training.py 
+    cmd: python src/PotatoDisease/pipeline/stage_03_model_training.py 
     deps:
-      - src/pipeline/stage_03_model_training.py
+      - src/PotatoDisease/pipeline/stage_03_model_training.py
       - config/config.yaml
       - artifacts/data_ingestion/PlantVillage
     # outs:
